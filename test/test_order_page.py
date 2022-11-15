@@ -11,8 +11,7 @@ class TestOrderPage:
 
     @allure.title('Инициализируем драйвер')
     def setup(self):
-#        self.driver = webdriver.Firefox()
-         self.driver = webdriver.Firefox(executable_path=r'C:\Users\julia.t\Downloads\geckodriver-v0.32.0-win64\geckodriver.exe')
+        self.driver = webdriver.Firefox()
 
     @allure.testcase('Заказ самоката')
     @allure.description('Проверяем процесс первого заказа самоката с положительным сценарием')
