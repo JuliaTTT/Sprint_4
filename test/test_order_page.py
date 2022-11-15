@@ -13,9 +13,8 @@ class TestOrderPage:
     def setup(self):
         self.driver = webdriver.Firefox()
 
-    @allure.testcase('Заказ самоката')
     @allure.description('Проверяем процесс первого заказа самоката с положительным сценарием')
-    @allure.title('Заказ самоката')
+    @allure.title('Заказ самоката #1')
     def test_order_scooter_1(self):
         base = BasePage(self.driver)
         base.open_order_page()
@@ -33,9 +32,8 @@ class TestOrderPage:
         assert self.driver.find_element(By.XPATH, '/html/body/div/div/div[2]/div[1]/div/input')
 
 
-    @allure.testcase('Заказ самоката')
     @allure.description('Проверяем процесс второго заказа самоката с положительным сценарием')
-    @allure.title('Заказ самоката')
+    @allure.title('Заказ самоката #2')
     def test_order_scooter_2(self):
         base = BasePage(self.driver)
         base.open_order_page()

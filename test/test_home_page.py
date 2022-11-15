@@ -14,7 +14,7 @@ class TestHomePage:
     def setup(self):
         self.driver = webdriver.Firefox()
 
-    @allure.title('Проверка вопросов о важном')
+    @allure.title('Проверка вопросов о важном #1')
     @allure.description('Проверяем первый вопрос и его ответ на соответствие')
     @allure.step('Сравниваем ожидаемые и актуальные данные')
     def test_answer_to_question_1(self):
@@ -28,7 +28,7 @@ class TestHomePage:
         click.click_question_1()
         assert click.click_answer_1() == answer
 
-    @allure.title('Проверка вопросов о важном')
+    @allure.title('Проверка вопросов о важном #2')
     @allure.description('Проверяем второй вопрос и его ответ на соответствие')
     @allure.step('Сравниваем ожидаемые и актуальные данные')
     def test_answer_to_question_2(self):
@@ -42,7 +42,7 @@ class TestHomePage:
         click.click_question_2()
         assert click.click_answer_2() == answer
 
-    @allure.title('Проверка вопросов о важном')
+    @allure.title('Проверка вопросов о важном #3')
     @allure.description('Проверяем третий вопрос и его ответ на соответствие')
     @allure.step('Сравниваем ожидаемые и актуальные данные')
     def test_answer_to_question_3(self):
@@ -56,7 +56,7 @@ class TestHomePage:
         click.click_question_3()
         assert click.click_answer_3() == answer
 
-    @allure.title('Проверка вопросов о важном')
+    @allure.title('Проверка вопросов о важном #4')
     @allure.description('Проверяем четвертый вопрос и его ответ на соответствие')
     @allure.step('Сравниваем ожидаемые и актуальные данные')
     def test_answer_to_question_4(self):
@@ -70,7 +70,7 @@ class TestHomePage:
         click.click_question_4()
         assert click.click_answer_4() == answer
 
-    @allure.title('Проверка вопросов о важном')
+    @allure.title('Проверка вопросов о важном #5')
     @allure.description('Проверяем пятый вопрос и его ответ на соответствие')
     @allure.step('Сравниваем ожидаемые и актуальные данные')
     def test_answer_to_question_5(self):
@@ -84,7 +84,7 @@ class TestHomePage:
         click.click_question_5()
         assert click.click_answer_5() == answer
 
-    @allure.title('Проверка вопросов о важном')
+    @allure.title('Проверка вопросов о важном #6')
     @allure.description('Проверяем шестой вопрос и его ответ на соответствие')
     @allure.step('Сравниваем ожидаемые и актуальные данные')
     def test_answer_to_question_6(self):
@@ -98,7 +98,7 @@ class TestHomePage:
         click.click_question_6()
         assert click.click_answer_6() == answer
 
-    @allure.title('Проверка вопросов о важном')
+    @allure.title('Проверка вопросов о важном #7')
     @allure.description('Проверяем седьмой вопрос и его ответ на соответствие')
     @allure.step('Сравниваем ожидаемые и актуальные данные')
     def test_answer_to_question_7(self):
@@ -112,7 +112,7 @@ class TestHomePage:
         click.click_question_7()
         assert click.click_answer_7() == answer
 
-    @allure.title('Проверка вопросов о важном')
+    @allure.title('Проверка вопросов о важном #8')
     @allure.description('Проверяем восьмой вопрос и его ответ на соответствие')
     @allure.step('Сравниваем ожидаемые и актуальные данные')
     def test_answer_to_question_8(self):
@@ -126,7 +126,6 @@ class TestHomePage:
         click.click_question_8()
         assert click.click_answer_8() == answer
 
-    @allure.testcase('Нажимаем на логотип Самокат')
     @allure.description('Проверяем переход на главную страницу сервера по клику на лого Самокат')
     @allure.title('Нажимаем на логотип Самокат')
     def test_click_scooter_logo(self):
@@ -135,8 +134,7 @@ class TestHomePage:
         WebDriverWait(self.driver, 3).until(expected_conditions.presence_of_element_located((By.XPATH, '/html/body/div/div/div/div[2]/div[2]/img')))
         assert self.driver.find_element(By.XPATH, '/html/body/div/div/div/div[2]/div[2]/img')
 
-    @allure.testcase('Нажимаем на логотип Яндекса')
-    @allure.description('Проверяем переход на главную страницу сайта Яндекс по клику на логотип Яндекса')
+    @allure.description('Проверяем переход на страницу Дзен по клику на логотип Яндекса')
     @allure.title('Нажимаем на логотип Яндекса')
     def test_click_yandex_logo(self):
         home_page = HomePage(self.driver)
